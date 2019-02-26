@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test for Mate academy</title>
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <main>
+        <div class="form-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mx-auto form-col">
+                        <div class="card card-body">
+                            <form name="addTaskForm" method="POST">
+                                <div class="form-group">
+                                    <label for="firstname">* Enter your first name:</label>
+                                    <input type="text" data-validation-required="required" data-validation-text="symbols" name="firstname" id="firstname" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">* Enter your last name:</label>
+                                    <input type="text" data-validation-required="required" data-validation-text="symbols" name="lastname" id="lastname" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="datepicker">* Select your birthday:</label>
+                                    <input type="text" id="datepicker" class="form-control datepicker" data-validation-required="required">
+                                </div>
+                                <div class="form-group">
+                                    <p>* Select your gender:</p>
+                                    <div>
+                                        <input type="radio" id="male" name="gender" data-validation="gender" value="male">
+                                        <label for="male">Male</label><br>  
+                                        <input type="radio" id="female" name="gender" data-validation="gender" value="female">
+                                        <label for="female">Female</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="countries">* Enter your country:</label>
+                                    <select name="countries" id="countries" class="form-control" data-validation="country">
+                                        <option value="0" selected>Please, select your country</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Russia">Russia</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <!-- ...And so on -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">* Enter your email:</label>
+                                    <input type="email" id="email" name="email" class="form-control" data-validation-required="required" data-validation="email" placeholder="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userPassword">* Enter your password:</label>
+                                    <input type="password" id="userPassword" name="userPassword" data-validation-required="required" data-validation="password" class="form-control" placeholder="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="adress">* Enter your adress:</label>
+                                    <input type="text" name="adress" id="adress" data-validation-required="required" data-validation-text="symbols" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes">Do you have anything to add?</label>
+                                    <textarea name="notes" id="notes" class="form-control">Notes</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <strong>* Required fields</strong>
+                                </div>
+                                <input type="button" class="btn" onclick="validate(this.form)" value="Submit">
+                            </form>
+                        </div>
+                        <!-- /.card card-body -->
+                    </div>
+                    <!-- /.col-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.form-section -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>
